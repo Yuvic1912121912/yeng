@@ -1,0 +1,13 @@
+{
+  "name": "Yeng Dev Container",
+  "image": "mcr.microsoft.com/devcontainers/universal:latest",
+  "features": {},
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-dotnettools.csharp",
+        "ms-vscode.vscode-typescript-next"
+      ]
+    }
+  }
+}
