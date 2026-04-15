@@ -1,0 +1,2 @@
+/workspaces/yeng/test/out/linux-x64/publish/test.pdb
+/workspaces/yeng/test/out/linux-x64/publish/test

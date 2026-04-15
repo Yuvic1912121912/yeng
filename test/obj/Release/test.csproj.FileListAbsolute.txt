@@ -1,0 +1,14 @@
+/workspaces/yeng/test/out/test.deps.json
+/workspaces/yeng/test/out/test.runtimeconfig.json
+/workspaces/yeng/test/out/test.dll
+/workspaces/yeng/test/out/test.pdb
+/workspaces/yeng/test/obj/Release/test.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/yeng/test/obj/Release/test.AssemblyInfoInputs.cache
+/workspaces/yeng/test/obj/Release/test.AssemblyInfo.cs
+/workspaces/yeng/test/obj/Release/test.csproj.CoreCompileInputs.cache
+/workspaces/yeng/test/obj/Release/test.sourcelink.json
+/workspaces/yeng/test/obj/Release/test.dll
+/workspaces/yeng/test/obj/Release/refint/test.dll
+/workspaces/yeng/test/obj/Release/test.pdb
+/workspaces/yeng/test/obj/Release/test.genruntimeconfig.cache
+/workspaces/yeng/test/obj/Release/ref/test.dll

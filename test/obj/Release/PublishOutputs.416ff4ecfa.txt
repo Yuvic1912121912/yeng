@@ -1,0 +1,4 @@
+/workspaces/yeng/test/out/publish/test.dll
+/workspaces/yeng/test/out/publish/test.deps.json
+/workspaces/yeng/test/out/publish/test.runtimeconfig.json
+/workspaces/yeng/test/out/publish/test.pdb
