@@ -33,12 +33,11 @@ class main{
      * @param {Object<string, string>} [env] - Environment variables.
      * @returns {Promise<Runtime>} The created runtime instance.
      */
-    static async load_dotnet(assets, mainAssembly, parms=[], debug=false, env={}, customFs=null, customFsMount="/custom") {
+    static async load_dotnet(assets, mainAssembly, parms=[], debug=false, env={}) {
         this.Runtime = await dotnet
             .withConfig({ resources: assets })
             .withMainAssembly(mainAssembly || "")
             .withApplicationArguments(...parms)
-            .withVirtualWorkingDirectory(customFsMount)
             .withEnvironmentVariables(env)
             .withDiagnosticTracing(!!debug)
             .withDebugging(debug ? 0 : 1)
