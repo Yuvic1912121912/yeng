@@ -1,4 +1,4 @@
-import {dotnet} from "./dotnet/native/dotnet.js";
+import createDotnetRuntime from "./dotnet/native/dotnet.js";
 // This is the dotnet entry point function
 /**
  * @file main.js
@@ -34,16 +34,19 @@ class main{
      * @returns {Promise<Runtime>} The created runtime instance.
      */
     static async load_dotnet(assets, mainAssembly, parms=[], debug=false, env={}) {
-        this.Runtime = await dotnet
-            .withConfig({ resources: assets })
-            .withMainAssembly(mainAssembly || "")
-            .withApplicationArguments(...parms)
-            .withEnvironmentVariables(env)
-            .withDiagnosticTracing(!!debug)
-            .withDebugging(debug ? 0 : 1)
-            .create(); console.log("dotnet Runtime loaded");
-            await this.Runtime.runMain();
-            if (debug === true) console.log("dotnet Runtime main assembly executed");
+        this.Runtime = await createDotnetRuntime({
+            config: {
+                resources: assets,
+                mainAssemblyName: mainAssembly || "",
+                applicationArguments: parms,
+                environmentVariables: env,
+                diagnosticTracing: !!debug,
+                debugLevel: debug ? 0 : 1,
+            },
+        });
+        console.log("dotnet Runtime loaded");
+        await this.Runtime.runMain();
+        if (debug === true) console.log("dotnet Runtime main assembly executed");
         return this.Runtime;
     }
 }
