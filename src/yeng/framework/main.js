@@ -45,7 +45,6 @@ class main{
             },
         });
         console.log("dotnet Runtime loaded");
-        await this.Runtime.runMain();
         if (debug === true) console.log("dotnet Runtime main assembly executed");
         return this.Runtime;
     }
