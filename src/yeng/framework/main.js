@@ -11,17 +11,17 @@ import createDotnetRuntime from "./dotnet/native/dotnet.js";
  * @property {*} [key] - Runtime properties
  */
 /**
- * @class main
+ * @class Main
  * Main class for the Yeng framework. namespace is 
- * @namespace yeng.framework.main.main
+ * @namespace yeng.framework.main.Main
  *  */
-class main{
+export default class Main{
     /** @type {string} The directory path of the framework package.
      * @namespace yeng.framework */
     static framework_dir = import.meta.url.substring(0, import.meta.url.lastIndexOf("/"));
     /** @type {string} The directory path of the Yeng framework. 
      * @namespace yeng*/
-    static yeng_dir = main.framework_dir.substring(0, main.framework_dir.lastIndexOf("/"));
+    static yeng_dir = Main.framework_dir.substring(0, Main.framework_dir.lastIndexOf("/"));
     /**
      * Loads the .NET runtime with the specified configuration.
      * @static
@@ -49,5 +49,4 @@ class main{
         return this.Runtime;
     }
 }
-export default main;
-export {main};
+export {Main};

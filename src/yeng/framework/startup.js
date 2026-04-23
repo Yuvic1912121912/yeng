@@ -5,10 +5,10 @@
  * If not, it registers a service worker and reloads the page to ensure the service worker takes control before initialization then does the opfs install.
  */
 /**
- * @class loader
- * Loader class for the Yeng framework. Responsible for registering the service worker setting up opfs and initializing the framework.
+ * @class Loader
+ * Loader class for the Yeng framework. Responsible for registering the service worker, setting up opfs, and initializing the framework.
  */
-class loader {
+export default class Loader {
     constructor() {
         if (navigator.serviceWorker.controller) {
             this.initialize();
@@ -225,5 +225,5 @@ class loader {
         location.reload();}
 }
 
-new loader();
-export default loader;
+const loader = new Loader();
+export {loader};
